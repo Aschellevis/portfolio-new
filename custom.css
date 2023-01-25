@@ -1,0 +1,24 @@
+body {
+    background-color: #333333;
+}
+
+nav {
+    background-color: #00ffff;
+    margin: 20px;
+    padding: 40px;
+    font-size: 14pt;
+    position: fixed;
+}
+
+.home img {
+    width: 60%;
+}
+
+.home {
+    background-color: #f2f2f2;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    -webkit-box-shadow: 0 0 10px #ffffff;
+    box-shadow: 0 0 10px #ffffff;
+}
