@@ -15,18 +15,19 @@
 <body>
     <nav class="navbar navbar-expand-md fixed-top rounded p-3 sticky-top">
         <a class="navbar-brand" href="#">Anouska Schellevis</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bi bi-menu-button fs-2"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link link-dark" href="#" id='home'><i class="bi bi-house"></i>Home</a>
-                <a class="nav-item nav-link link-dark" href="#" id='about'><i class="bi bi-person-video2"></i>Over mij</a>
-                <a class="nav-item nav-link link-dark" href="#" id='projects'><i class="bi bi-archive"></i>Projecten</a>
-                <a class="nav-item nav-link link-dark" href="#" id='cv'><i class="bi bi-body-text"></i>CV</a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav" id="currentPage">
+                <a class="nav-item nav-link active" href="#" id='home'><i class="bi bi-house me-1"></i>Home</a>
+                <a class="nav-item nav-link" href="#" id='about'><i class="bi bi-person-video2 me-1"></i>Over mij</a>
+                <a class="nav-item nav-link" href="#" id='projects'><i class="bi bi-archive me-1"></i>Projecten</a>
+                <a class="nav-item nav-link" href="#" id='cv'><i class="bi bi-body-text me-1"></i>CV</a>
             </div>
         </div>
     </nav>
+    <hr></hr>
     <main role="main" class="container">
         <div class="row">
             <div class="col">
@@ -34,144 +35,37 @@
             </div>
         </div>
     </main>
+    <div class="container-md">
+        <div class="row p-0">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script>
-        // all the arrays for the projects
-        let healthOne = {
-            title: 'Health One',
-            image: '../img/projects/healthone/healthone.jpg',
-            
-        }
-
-        //jQuery codes
-        $(document).ready(function(){
-
-            // show home page
-            $(document).on('click', '#home', function(){
-
-                var html = `
-                        <div class="container-md home py-5">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="img/about/anouska.jpg" alt="Anouska" class="mx-auto d-block">
-                                </div>
-                                <div class="col-md-8">
-                                    <p>
-                                        Welkom!<br>
-                                        Mijn naam is Anouska Schellevis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        `;
-
-                $('#content').html(html);
-            });
-
-            // show about me page
-            $(document).on('click','#about', function(){
-                
-                var html = `
-                        <div class="container-sm mt-5">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h2 class="text-white ">Leefomgeving</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about container-fluid p-0">
-                            <div class="row mb-5 mx-5 bg-secondary">
-                                <div class="about-first col-md-4 p-0 mx-auto d-block">
-                                    <img src="img/thuis.jpg" alt="Thuis" class="image mx-auto d-block">
-                                    <div class="text-block">
-                                        <p class="caption">Ik ben 19 jaar en woon mijn hele leven al in 's-Gravenzande.</p>
-                                    </div>
-                                </div>
-                                <div class="about-first col-md-3 p-0">
-                                    <img src="img/gezin.jpg" alt="Gezin" class="image mx-auto d-block">
-                                    <div class="text-block">
-                                        <p class="caption">Ik leef samen met mijn vader, moeder, zusje en broertje.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row my-5 mx-5 bg-secondary">
-                                <div class="about-first col-md-3 p-0 mx-auto">
-                                    <img src="img/molly.jpg" alt="Molly" class="image mx-auto d-block">
-                                    <div class="text-block">
-                                        <p class="caption">Ik heb een hond genaamd Molly.</p>
-                                    </div>
-                                </div>
-                                <div class="about-first col-md-3 p-0 mx-auto">
-                                    <img src="img/parkieten.jpg" alt="Parkieten" class="image mx-auto d-block">
-                                    <div class="text-block">
-                                        <p class="caption">Daarnaast hebben we ook nog 2 parkieten.</p>
-                                    </div>
-                                </div>
-                                <div class="about-first col-md-3 p-0 mx-auto">
-                                    <img src="img/familie.jpg" alt="Familie" class="image mx-auto d-block">
-                                    <div class="text-block">
-                                        <p class="caption">Mijn familie is erg belangrijk voor mij.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container-sm mt-5">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h2 class="text-white ">Hobby's</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about container-fluid p-0">
-                            <div class="row mb-5 mx-5 bg-secondary">
-                                <div class="about-first col-md-3 p-0 mx-auto">
-                                    <img src="img/formule1.jpg" alt="Formule 1" class="image mx-auto d-block">
-                                    <div class="text-block">
-                                        <p class="caption">Ik ben een groot formule 1 fan.</p>
-                                    </div>
-                                </div>
-                                <div class="about-first col-md-3 p-0 mx-auto">
-                                    <img src="img/badminton.jpg" alt="Badminton" class="image mx-auto d-block">
-                                    <div class="text-block">
-                                        <p class="caption">Badminton is mijn grootste passie. Dit doe ik het liefst in mijn vrije tijd.</p>
-                                    </div>
-                                </div>
-                                <div class="about-first col-md-3 p-0 mx-auto">
-                                    <img src="img/puzzelen.jpg" alt="Puzzelen" class="image mx-auto d-block">
-                                    <div class="text-block">
-                                        <p class="caption">Puzzelen is voor mij iets rustgevends. Ik zou dit uren kunnen doen.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        `;
-
-                $('#content').html(html);
-            });
-
-            // show projects page
-            $(document).on('click', '#projects', function(){
-
-                var html = `
-
-                        `;
-
-                $('#content').html(html);
-            });
-
-            // show cv page
-            $(document).on('click', '#cv', function(){
-
-                var html = `
-                        <h2>Doei</h2>
-                        `;
-
-                $('#content').html(html);
-            });
-
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script type="application/javascript" src="/js/main.js"></script>
 </body>
 </html>

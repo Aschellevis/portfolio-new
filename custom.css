@@ -1,24 +1,70 @@
 body {
-    background-color: #333333;
+    background-color: #11263b;
 }
 
 nav {
-    background-color: #00ffff;
-    margin: 20px;
+    background-color: #11263b;
+    margin: auto;
     padding: 40px;
     font-size: 14pt;
     position: fixed;
+    width: 70%;
+}
+
+.nav-link, .navbar-brand {
+    color: #DBEDF3;
+    font-size: 20pt;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.active, .nav-link:hover {
+    color:#ECB365 !important;
+}
+
+.navbar-toggler {
+    border: solid #DBEDF3;
+    color: #DBEDF3;
+    padding: 5px 20px;
+    box-shadow: 2px;
+}
+
+.navbar-toggler:hover {
+    border: solid #ECB365;
+    color: #ECB365;
+    padding: 5px 20px;
+    box-shadow: 2px;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+hr {
+    color: #ECB365;
+    width: 70%;
+    margin: auto;
+    height: 2px;
+    border-width: 0;
+    background-color: #ECB365;
+    opacity: 1;
 }
 
 .home img {
     width: 60%;
 }
 
+.home p {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
 .home {
-    background-color: #f2f2f2;
+    background-color: #DBEDF3;
     width: 100%;
     margin-top: 100px;
     margin-bottom: 100px;
-    -webkit-box-shadow: 0 0 10px #ffffff;
-    box-shadow: 0 0 10px #ffffff;
+    -webkit-box-shadow: 0 0 10px #DBEDF3;
+    box-shadow: 0 0 10px #DBEDF3;
 }
