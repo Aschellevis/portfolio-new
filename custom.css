@@ -15,6 +15,12 @@ nav {
     color: #DBEDF3;
     font-size: 20pt;
     font-family: 'Montserrat Alternates', sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-brand:hover {
+    color: #DBEDF3;
 }
 
 .active, .nav-link:hover {
@@ -67,4 +73,8 @@ hr {
     margin-bottom: 100px;
     -webkit-box-shadow: 0 0 10px #DBEDF3;
     box-shadow: 0 0 10px #DBEDF3;
+}
+
+.projects i {
+    float: right;
 }
