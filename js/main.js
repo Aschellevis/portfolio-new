@@ -132,10 +132,6 @@ $(document).ready(function(){
     // show projects page
     $(document).on('click', '#projects', function(){
 
-        var html = `
-                
-                `;
-
         $('#content').html(html);
     });
 
