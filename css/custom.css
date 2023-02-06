@@ -128,23 +128,39 @@ hr {
     color: white;
 }
 
-.home img {
-    width: 60%;
-}
-
-.home p {
-    font-family: 'Montserrat Alternates', sans-serif;
-}
-
-.home {
-    background-color: #DBEDF3;
+.design-block {
+    z-index: 1;
+    display: block;
+    float: left;
+    margin-top: -100px;
     width: 100%;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    -webkit-box-shadow: 0 0 10px #DBEDF3;
-    box-shadow: 0 0 10px #DBEDF3;
+    background-color: #ECB365;
+    transform: skew(0deg,5deg);
+    -ms-transform: skew(0deg,5deg); /* IE 9 */
+    -webkit-transform: skew(0deg,5deg); /* Safari and Chrome */
 }
 
-.projects i {
-    float: right;
+.design-block, .design-block-middle {
+    display: block;
+    float: left;
+    margin: 50px auto 200px;
+    width: 100%;
+    padding: 0 5%;
+    transform: skew(0deg,-5deg);
+    -ms-transform: skew(0deg,-5deg);
+    -webkit-transform: skew(0deg,-5deg);
+}
+
+.projects .bi-github {
+    background-color: #6A2786;
+    color: white;
+    padding: 5px;
+}
+
+.card {
+    transition: 1s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
