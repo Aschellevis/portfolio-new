@@ -154,13 +154,26 @@ hr {
 .projects .bi-github {
     background-color: #6A2786;
     color: white;
-    padding: 5px;
+    padding: 3px;
+    border-radius: 100% 50%;
 }
 
 .card {
     transition: 1s ease;
+    border: none;
+    width: 90%;
 }
 
 .card:hover {
     transform: scale(1.1);
+}
+
+.project-title {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Comfortaa', cursive;
+}
+
+.project-title:hover {
+    color: #000000;
 }
