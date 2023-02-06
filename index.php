@@ -6,6 +6,7 @@ include_once('templates/head.php');
 <body>
     <?php
     include_once('templates/navbar.php');
+    include_once('templates/mediabar.php');
     ?>
     <main role="main" class="container">
         <div class="row m-5">
