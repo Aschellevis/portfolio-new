@@ -48,4 +48,10 @@ $(document).ready(function(){
     //     $('#content').html(html);
     // });
 
+    // Add active class to the current button (highlight it)
+    $('li').on(click, function() { 
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+    });
+
 });
