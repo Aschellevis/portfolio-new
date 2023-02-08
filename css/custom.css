@@ -2,6 +2,11 @@ body {
     background-color: #11263b;
 }
 
+.wrapper {
+    position: relative;
+    height: 100%;
+}
+
 nav {
     background-color: #11263b;
     margin: auto;
@@ -9,6 +14,7 @@ nav {
     font-size: 14pt;
     position: fixed;
     width: 70%;
+    z-index: 2 !important;
 }
 
 .nav-link, .navbar-brand {
@@ -58,97 +64,71 @@ hr {
     opacity: 1;
 }
 
-.icon-bar-1 {
-    position: fixed;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+main {
     z-index: 2;
+    position: relative;
 }
 
-.icon-bar-2{
+.fl-fl {
+    background: #000000;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 3px;
+    width: 190px;
     position: fixed;
-    top: 40%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    right: -140px;
     z-index: 2;
+    font: normal normal 10px Arial;
+    -webkit-transition: all 0.9s ease;
+    -moz-transition: all 0.9s ease;
+    -ms-transition: all 0.9s ease;
+    -o-transition: all 0.9s ease;
+    transition: all 0.9s ease;
 }
 
-.icon-bar-3 {
-    position: fixed;
-    top: 30%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    z-index: 2;
+.fl-fl:hover {
+    right: 0;
 }
 
-.icon-bar-4 {
-    position: fixed;
-    top: 20%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    z-index: 2;
-}
-
-.icon-bar-1 a, .icon-bar-2 a, .icon-bar-3 a, .icon-bar-4 a {
-    display: block;
+.fl-fl a {
+    color: #fff !important;
+    text-decoration: none;
     text-align: center;
-    padding: 14px 18px;
-    transition: all 0.6s ease;
-    color: #F6F6F6;
-    font-size: 36px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    line-height: 43px!important;
+    vertical-align: top!important;
 }
 
-.icon-bar-1 a:hover, .icon-bar-2 a:hover, .icon-bar-3 a:hover, .icon-bar-4 a:hover {
-    padding-left: 40px;
+.bi {
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 0;
+    width: 40px;
+    margin-left: 8px;
 }
 
 .facebook {
     background: #3B5998;
     color: #F6F6F6;
+    top: 160px;
 }
 
 .instagram {
     background-image: linear-gradient(to bottom left, #843FB4, #FA040F, #F4D100);
+    top: 225px;
 }
 
 .mail {
     background: #EA4335;
     color: #F6F6F6;
+    top: 290px;
 }
 
 .github {
     background-color: #6A2786;
     color: #F6F6F6;
-}
-
-.design-block {
-    z-index: 1;
-    display: block;
-    float: left;
-    margin-top: -100px;
-    width: 100%;
-    background-color: #ECB365;
-    transform: skew(0deg,5deg);
-    -ms-transform: skew(0deg,5deg); /* IE 9 */
-    -webkit-transform: skew(0deg,5deg); /* Safari and Chrome */
-}
-
-.design-block, .design-block-middle {
-    display: block;
-    float: left;
-    margin: 50px auto 200px;
-    width: 100%;
-    padding: 0 5%;
-    transform: skew(0deg,-5deg);
-    -ms-transform: skew(0deg,-5deg);
-    -webkit-transform: skew(0deg,-5deg);
+    top: 355px;
 }
 
 .projects .bi-github {
@@ -156,6 +136,11 @@ hr {
     color: #F6F6F6;
     padding: 3px;
     border-radius: 100% 50%;
+}
+
+.projects {
+    position: absolute;
+    z-index: 3;
 }
 
 .card {
@@ -170,6 +155,12 @@ hr {
 .card-image-top {
     border-top-left-radius: 15px !important;
     border-top-right-radius: 15px !important;
+}
+
+.card img {
+    width:  100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card:hover {
@@ -191,7 +182,7 @@ hr {
 }
 
 .project-title:hover {
-    color: #000000;
+    color: #ECB365;
 }
 
 .modal {
@@ -215,15 +206,10 @@ hr {
     float: right;
 }
 
-.modal img {
+#simpleModal-1 img {
     width: 100%;
-    height: 100%;
+    height: 340px;
     object-fit: cover;
-}
-
-.carousel-item {
-    min-height: 240px;
-    max-height: 280px;
 }
 
 .description {
@@ -234,6 +220,7 @@ hr {
 
 .description img {
     border-radius: 8px;
+    width: 100%;
 }
 
 .modal .table {
@@ -266,6 +253,11 @@ hr {
     font-style: italic;
     text-align: right;
     margin-right: 20px;
+}
+
+#simpleModal-5 img {
+    height: 480px;
+    object-fit: cover;
 }
 
 .modal-window {
@@ -302,4 +294,9 @@ hr {
 
 .open {
     display: block;
+}
+
+.design-block {
+    position: absolute;
+    z-index: 1;
 }
