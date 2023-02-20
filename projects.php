@@ -6,30 +6,6 @@ $projects = array(
     array("Swift projects", "img/projects/swift.jpg", "https://github.com/Aschellevis?tab=repositories&q=&type=&language=swift&sort=", '<a class="project-title" data-target="simpleModal-4" data-toggle="modal">Swift projects</a>'),
     array("Pizza", "img/projects/pizza/pizza.jpg", "https://github.com/Aschellevis/Pizza_project", '<a class="project-title" data-target="simpleModal-5" data-toggle="modal">Pizza</a>')
 );
-$healthOne = array(
-    array("img/projects/healthone/healthone.jpg", "Dit is de homepagina van Health One"),
-    array("img/projects/healthone/healthone_categories.jpg", "Er zijn vier verschillende categorieën sportapparaten."),
-    array("img/projects/healthone/healthone_reviews.jpg", "Bij elk apparaat staan reviews die geschreven zijn door de bezoekers."),
-    array("img/projects/healthone/healthone_contact.jpg", "Er zijn verschillende manieren op contact op te nemen."),
-    array("img/projects/healthone/healthone_register.jpg", "Om een account aan te maken, moet je registreren."),
-    array("img/projects/healthone/healthone_login.jpg", "Daarna kan je inloggen op de website."),
-    array("img/projects/healthone/healthone_loggedin.jpg", "Als je bent ingelogd, kom je op je eigen homepagina."),
-    array("img/projects/healthone/healthone_change_profile.jpg", "Je kan zelf je profiel veranderen."),
-    array("img/projects/healthone/healthone_change_password.jpg", "Wachtwoord kan ook veranderd worden."),
-    array("img/projects/healthone/healthone_new_review.jpg", "Je moet ingelogd zijn om een review te kunnen schrijven.")
-);
-$pizzas = array(
-    array("img/projects/pizza/home.jpg", "Dit is de homepagina van de pizza website. Je ziet hier ook de 3 categorieën staan."),
-    array("img/projects/pizza/meat-pizza.jpg", "Er zijn 5 verschillende soorten vleespizza's. Als je op 'toevoegen' klikt, bestel je de pizza."),
-    array("img/projects/pizza/fish-pizza.jpg", "De tweede categorie heeft maar 1 soort pizza."),
-    array("img/projects/pizza/veggie-pizza.jpg", "De derde en laatste categorie heeft weer 5 soorten."),
-    array("img/projects/pizza/pay.jpg", "Na het kiezen moet je je gegevens invullen voor het betalen."),
-    array("img/projects/pizza/payed.jpg", "Als alle gegevens goed zijn ingevuld, heb je de pizza besteld."),
-    array("img/projects/pizza/about.jpg", "Op de 'over mij' pagina staat informatie over de eigenaar."),
-    array("img/projects/pizza/contact.jpg", "Hier staat de contactgegevens."),
-    array("img/projects/pizza/login.jpg", "Er is een inlogpagina waar alleen de admin in kan loggen."),
-    array("img/projects/pizza/home-admin.jpg", "Als de admin ingelogd is, krijg je alle bestellingen te zien met de naam van de klant.")
-);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,41 +48,23 @@ include_once('templates/head.php');
             <div id="simpleModal-1" class="modal">
                 <div class="modal-window">
                 <button data-dismiss="modal" class="bi bi-x-circle"></button>
-                    <div id="carouselExampleCaptions" class="carousel slide w-75 mx-auto my-4" data-bs-ride="carousel">
-                        <div class="carousel-indicators text-dark">
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                    <div class="carousel">
+                        <div class="images">
+                            <img src="img/projects/healthone/healthone.jpg" alt="home" class="image active">
+                            <img src="img/projects/healthone/healthone_categories.jpg" alt="categories" class="image">
+                            <img src="img/projects/healthone/healthone_reviews.jpg" alt="reviews" class="image">
+                            <img src="img/projects/healthone/healthone_contact.jpg" alt="contact" class="image">
+                            <img src="img/projects/healthone/healthone_register.jpg" alt="register" class="image">
+                            <img src="img/projects/healthone/healthone_login.jpg" alt="login" class="image">
+                            <img src="img/projects/healthone/healthone_loggedin.jpg" alt="logged in" class="image">
+                            <img src="img/projects/healthone/healthone_change_profile.jpg" alt="change profile" class="image">
+                            <img src="img/projects/healthone/healthone_change_password.jpg" alt="change password" class="image">
+                            <img src="img/projects/healthone/healthone_new_review.jpg" alt="add review" class="image">
                         </div>
-                        <div class="slider carousel-inner">
-                        <?php
-                        foreach ($healthOne as $info) {
-                            ?>
-                            <div class="carousel-item active">
-                                <img src="<?= $info[0]; ?>" class="d-block w-100 rounded" alt="start healthone">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 py-2">
-                                    <p><?= $info[1]; ?></p>
-                                </div>
-                            </div>
-                            <?php
-                        }
-                            ?>
+                        <div class="controls">
+                            <a class="action left"><i class="bi bi-arrow-left"></i></a>
+                            <a class="action right"><i class="bi bi-arrow-right"></i></a>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                            <span><i class="bi bi-arrow-left-short fs-1 text-dark" aria-hidden="true"></i></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                            <span><i class="bi bi-arrow-right-short fs-1 text-dark" aria-hidden="true"></i></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                     <div class="row description">
                         <div class="col-12">
@@ -147,7 +105,6 @@ include_once('templates/head.php');
                                         <td>Databases</td>
                                         <td>Review schrijven</td>
                                     </tr>
-                                    <tr>MySQL</tr>
                                 </tbody>
                             </table>
                         </div>
@@ -157,6 +114,15 @@ include_once('templates/head.php');
             <div id="simpleModal-2" class="modal">
                 <div class="modal-window">
                     <button data-dismiss="modal" class="bi bi-x-circle"></button>
+                    <div class="row description">
+                        <div class="col-12">
+                            <p>
+                                Dit is de eerste game die ik zelf heb gemaakt. Het lijk heel erg op Doodle Jump. Het verschil is dat er maar 1 wereld is 
+                                waarin je kan spelen. Door de wortels te pakken die je onderweg tegen komt gaat je score omhoog. De functie met de 
+                                springveer doet het nog niet.
+                            </p>
+                        </div>
+                    </div>
                     <div class="row pb-5">
                         <div class="col-sm-12 p-2">
                             <table class="table">
@@ -247,6 +213,32 @@ include_once('templates/head.php');
                             </p>
                         </div>
                     </div>
+                    <div class="row pb-5">
+                        <div class="col-sm-12 p-2">
+                            <table class="table">
+                                <thead class="fs-4">
+                                    <tr>
+                                        <th scope="col">Programmeertalen</th>
+                                        <th scope="col">Functionaliteiten</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Swift</td>
+                                        <td>Willekeurig element laten zien</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Geeft feedback op je antwoord</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Laat je totale score zien aan het eind</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                     <div class="row description">
                         <div class="col-8">
                             Het tweede project is een colormixer. Je hebt 3 knoppen met de kleuren rood, groen en blauw. Door de knoppen om 
@@ -255,6 +247,28 @@ include_once('templates/head.php');
                         </div>
                         <div class="col-4">
                             <img src="img/projects/color-mix.jpg" alt="mix">
+                        </div>
+                    </div>
+                    <div class="row pb-5">
+                        <div class="col-sm-12 p-2">
+                            <table class="table">
+                                <thead class="fs-4">
+                                    <tr>
+                                        <th scope="col">Programmeertalen</th>
+                                        <th scope="col">Functionaliteiten</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Swift</td>
+                                        <td>Zelf een kleur mengen</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Reset de waardes</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                     <div class="row description">
@@ -296,41 +310,23 @@ include_once('templates/head.php');
             <div id="simpleModal-5" class="modal">
                 <div class="modal-window">
                     <button data-dismiss="modal" class="bi bi-x-circle"></button>
-                    <div id="carousel2ExampleCaptions" class="carousel slide w-75 mx-auto my-2" data-bs-ride="carousel">
-                        <div class="carousel-indicators text-dark">
-                            <button type="button" data-bs-target="#carousel2ExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carousel2ExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carousel2ExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carousel2ExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#carousel2ExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                            <button type="button" data-bs-target="#carousel2ExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                            <button type="button" data-bs-target="#carousel2ExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                            <button type="button" data-bs-target="#carousel2ExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                            <button type="button" data-bs-target="#carousel2ExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
-                            <button type="button" data-bs-target="#carousel2ExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                    <div class="carousel">
+                        <div class="images">
+                            <img src="img/projects/pizza/home.jpg" alt="home" class="image active">
+                            <img src="img/projects/pizza/meat-pizza.jpg" alt="meat" class="image">
+                            <img src="img/projects/pizza/fish-pizza.jpg" alt="fish" class="image">
+                            <img src="img/projects/pizza/veggie-pizza.jpg" alt="veggie" class="image">
+                            <img src="img/projects/pizza/pay.jpg" alt="pay" class="image">
+                            <img src="img/projects/pizza/payed.jpg" alt="payed" class="image">
+                            <img src="img/projects/pizza/about.jpg" alt="about" class="image">
+                            <img src="img/projects/pizza/contact.jpg" alt="contact" class="image">
+                            <img src="img/projects/pizza/login.jpg" alt="login" class="image">
+                            <img src="img/projects/pizza/home-admin.jpg" alt="admin" class="image">
                         </div>
-                        <div class="slider carousel-inner">
-                        <?php
-                        foreach ($pizzas as $pizza) {
-                            ?>
-                            <div class="carousel-item active">
-                                <img src="<?= $pizza[0]; ?>" class="d-block w-100 rounded" alt="start healthone">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 py-2">
-                                    <p><?= $pizza[1]; ?></p>
-                                </div>
-                            </div>
-                            <?php
-                        }
-                            ?>
+                        <div class="controls">
+                            <a class="action left"><i class="bi bi-arrow-left"></i></a>
+                            <a class="action right"><i class="bi bi-arrow-right"></i></a>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel2ExampleCaptions" data-bs-slide="prev">
-                            <span><i class="bi bi-arrow-left-short fs-1 text-white" aria-hidden="true"></i></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel2ExampleCaptions" data-bs-slide="next">
-                            <span><i class="bi bi-arrow-right-short fs-1 text-white" aria-hidden="true"></i></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                     <div class="row description">
                         <div class="col-12">
@@ -352,14 +348,18 @@ include_once('templates/head.php');
                                 <tbody>
                                     <tr>
                                         <td>HTML</td>
-                                        <td>Slaat de quotes op in een constante</td>
+                                        <td>Inloggen</td>
                                     </tr>
                                     <tr>
                                         <td>CSS</td>
-                                        <td>Kiest een willekeurige quote</td>
+                                        <td>Pizza bestellen</td>
                                     </tr>
                                     <tr>
-                                        <td>Javascript</td>
+                                        <td>Symfony 5</td>
+                                        <td>Gegevens opslaan in de database</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Databases</td>
                                         <td></td>
                                     </tr>
                                 </tbody>
@@ -377,7 +377,45 @@ include_once('templates/head.php');
         <?php 
         require_once("js/main.js");
         require_once("js/quotegenerator.js");
+        require_once("js/image-slider.js");
         ?>
+
+        $(document).ready(function() {
+            $('.right').on('click', function() {
+                var current = $('.active');
+                var next = current.next();
+                if(next.length) {
+                    current.removeClass('active');
+                    next.addClass('active');
+                } else {
+                    current.removeClass('active');
+                    $('.image:first-child').addClass('active');
+                }
+            });
+            $('.left').on('click', function() {
+                var current = $('.active');
+                var prev = current.prev();
+                if(prev.length) {
+                    current.removeClass('active');
+                    prev.addClass('active');
+                } else {
+                    current.removeClass('active');
+                    $('.image:last-child').addClass('active');
+                }
+            });
+        });
+
+        setInterval(function() {
+            var current = $('.active');
+            var next = current.next();
+            if(next.length) {
+                current.removeClass('active');
+                next.addClass('active');
+            } else {
+                current.removeClass('active');
+                $('.image:first-child').addClass('active');
+            }
+        }, 3000);
     </script>
 </body>
 </html>
