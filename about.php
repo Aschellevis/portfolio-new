@@ -12,10 +12,15 @@ include_once('templates/head.php');
         <svg viewbox="50 50 500 320" class="design-block">
             <path fill="#ECB365" fill-opacity="1" d="M 50 200 L 750 150 L 750 150 L 750 250 L 750 250 L 50 300 L 50 200 "></path>
         </svg>
-        <main role="main" class="container">
-            <div class="row m-5">
-                <div class="col">
-                    <div id="content"></div>
+        <main role="main" class="container about">
+            <div class="container-md">
+                <div class="row m-5 text-white">
+                    <div class="col-6">
+                        <img src="img/about/anouska.jpg" alt="me">
+                    </div>
+                    <div class="col-6">
+                        
+                    </div>
                 </div>
             </div>
         </main>
